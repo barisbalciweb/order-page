@@ -1,0 +1,290 @@
+//------------------ GENERAL ------------------
+//PHONE => IPHONE SE 320 x 568 and above
+:root {
+  --red: #a72f22;
+  --wine-red: rgba(65, 6, 14, 0.5);
+  --bg-color: rgba(0, 0, 0, 0.5);
+}
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  box-sizing: border-box;
+  color: wheat;
+  margin: 0;
+}
+body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+// ------------------PAGE 5 (last page) ------------------
+
+// ------------------ ORDER-PAGE ------------------
+.order-page {
+  @include flex-col-center;
+  justify-content: space-between;
+  width: 100%;
+  color: black;
+  position: relative;
+}
+.order-page .bg-pic {
+  width: 100%;
+  height: 100%;
+  background: url("./img/order-page-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(20%) blur(5px) saturate(150%);
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.order-page-header {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(198 13 13 / 60%);
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  color: wheat;
+  letter-spacing: 5px;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+.centering-div-header {
+  @include flex-col-center;
+  height: 80%;
+}
+.search-field {
+  @include flex-row-center;
+  width: 200px;
+  position: relative;
+}
+.search-icon {
+  color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+}
+.search-icon:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.search-input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Quicksand", sans-serif;
+}
+.search-input::placeholder {
+  text-align: center;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-input:focus::placeholder {
+  color: transparent;
+}
+.search-input::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f002";
+}
+.header-icons {
+  position: absolute;
+  right: 30px;
+}
+.order-page-main {
+  @include flex-col-center;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+  gap: 30px;
+}
+.category-block {
+  @include flex-col-center;
+  align-items: start;
+  gap: 20px;
+}
+.category-header {
+  display: block;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  color: wheat;
+  animation: slide 2s backwards;
+}
+.cards {
+  @include flex-col-center;
+  gap: 30px;
+  animation: fadeIn 2s;
+}
+.card {
+  @include flex-col-center;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0px 0px 3px 2px rgba(197, 197, 196, 0.5);
+}
+.card:hover {
+  box-shadow: 0px 0px 5px 8px rgba(255, 115, 97, 0.5);
+}
+.card-pic {
+  width: 100%;
+  height: 65%;
+}
+.pic-1 {
+  background: url("./img/appetizers-1.jpg") no-repeat;
+  background-size: cover;
+}
+.pic-2 {
+  background: url("./img/appetizers-2.jpg") no-repeat;
+  background-size: cover;
+}
+.pic-3 {
+  background: url("./img/appetizers-3.jpg") no-repeat;
+  background-size: cover;
+}
+.pic-4 {
+  background: url("./img/appetizers-4.jpg") no-repeat;
+  background-size: cover;
+}
+.card-bar {
+  @include flex-row-center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(to right, wheat 50%, rgb(138, 125, 100));
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+.food-name {
+  width: 70%;
+}
+.food-price {
+  font-weight: bold;
+}
+.add-btn {
+  @include flex-col-center;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  background-color: red;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(58, 58, 58);
+}
+.add-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: rgb(244, 86, 86);
+}
+.order-page-footer {
+  @include flex-col-center;
+  justify-content: end;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(198 13 13 / 50%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+}
+.centering-div-footer {
+  @include flex-col-center;
+  width: 100%;
+  height: 80%;
+  gap: 20px;
+}
+.footer-links {
+  @include flex-row-center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.order-page-footer a {
+  color: wheat;
+  text-decoration: none;
+}
+.order-page-footer a:hover {
+  color: white;
+}
+//TABLET => IPAD MINI 768 x 1024 and above
+@media screen and (min-width: 768px) {
+  //PAGE-5
+  .top {
+    height: 15%;
+  }
+  .mittle {
+    height: 70%;
+  }
+  .form-sub-div {
+    margin: 0;
+  }
+  .adress {
+    gap: 30px;
+  }
+  .bottom {
+    height: 15%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .order-page-header {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  }
+  .centering-div-header {
+    height: 70%;
+  }
+  .search-field {
+    width: 250px;
+  }
+  .cards {
+    flex-direction: row;
+  }
+  .order-page-footer {
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
+  .centering-div-footer {
+    height: 70%;
+  }
+  .footer-links {
+    gap: 50px;
+  }
+}
+//BIG TABLETS & DESKTOP =>  1280 x 800 and above
+@media screen and (min-width: 1025px) {
+  .mittle {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+//ANIMATIONS
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+  }
+}

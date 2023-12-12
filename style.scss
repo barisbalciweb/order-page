@@ -1,0 +1,40 @@
+//PHONE => IPHONE SE 320 x 568 and above
+:root {
+  --bg-black: rgba(0, 0, 0, 0.5);
+  --bg-dark-red: rgba(65, 6, 14, 0.5);
+  --bg-order-page: rgb(198 13 13 / 40%);
+}
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  box-sizing: border-box;
+  color: wheat;
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  overflow-x: hidden;
+}
+body * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//PAGE-5
+@import "__page-5";
+//ORDER-PAGE
+@import "__order-page";
+//MEDIA QUERIES
+@import "__media-queries";
+//KEYFRAMES
+@import "__keyframes";

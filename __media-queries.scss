@@ -1,0 +1,74 @@
+//TABLET => IPAD MINI 768 x 1024 and above
+@media screen and (min-width: 768px) {
+  //--------------- PAGE-5 ---------------
+  .top {
+    height: 15%;
+  }
+  .mittle {
+    height: 70%;
+    gap: 20px;
+  }
+  .form-sub-div {
+    margin: 0;
+  }
+  .adress {
+    gap: 30px;
+  }
+  .bottom {
+    height: 15%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  //--------------- ORDER-PAGE ---------------
+  .order-page-header {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+  }
+  .logo {
+    display: block;
+    width: 80px;
+  }
+  .centering-div-header {
+    height: 70%;
+    padding-top: 20px;
+  }
+  .search-field {
+    width: 250px;
+  }
+  .header-icons {
+    flex-direction: row;
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  .cards {
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .order-page-footer {
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
+  .centering-div-footer {
+    height: 70%;
+  }
+  .footer-links {
+    gap: 50px;
+  }
+}
+
+//BIG TABLETS & DESKTOP =>  1280 x 800 and above
+@media screen and (min-width: 1025px) {
+  //--------------- PAGE-5 ---------------
+  .mittle {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  //--------------- ORDER-PAGE ---------------
+  .logo {
+    width: 100px;
+  }
+  .cards {
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
