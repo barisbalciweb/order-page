@@ -1,4 +1,4 @@
-# DCI CSS-finalproject (Dec 12, 2023)
+# DCI Final Project for Module "UI Basics" (Dec 12, 2023)
 
 [https://barisbalcimusic.github.io/CSS-finalproject/](https://barisbalcimusic.github.io/CSS-finalproject/)
 
